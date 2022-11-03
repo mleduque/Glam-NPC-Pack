@@ -2,36 +2,29 @@ BEGIN GV#DAVEJ
 
 
 //Thalantyr
-INTERJECT ~%tutu_var%THALAN~ 1 GV#DAVEInterjectTHALAN1
+I_C_T ~%tutu_var%THALAN~ 1 GV#DAVEInterjectTHALAN1
 == GV#DAVEJ IF ~InParty("GV#DAVE") InMyArea("GV#DAVE") !StateCheck("GV#DAVE",CD_STATE_NOTVALID)~ THEN
 ~It's not you, <CHARNAME>. I've knocked on his door once or twice before and he was exactly this grumpy every time. Probably cabin fever.~
+== %tutu_var%THALAN ~On the contrary, a spell of cabin fever may be just the remedy I need. Would that I were allowed the chance to find out.~
 END
-  ++ ~Rumors talk of a powerful mage that lives out here. If it is you, I would like to speak with you.~ EXTERN %tutu_var%THALAN 2
-  ++ ~I go where I wish and stay as long as I please. Don't threaten me.~ EXTERN %tutu_var%THALAN 3
-  ++ ~I apologize for the intrusion, and will leave immediately.~ EXTERN %tutu_var%THALAN 4
-  +~PartyHasItem("MISC49")~+ ~Well, it's rather amusing actually. You see, I happened to rescue this... um... talking chicken...~ DO
-  ~TakePartyItem("MISC49")
-  DestroyItem("MISC49")
-  CreateCreature("MELICA",[286.398],8)
-  ActionOverride("Melicamp",SetNumTimesTalkedTo(2))
-  SetGlobal("LeftChicken","GLOBAL",1)~ EXTERN %tutu_var%THALAN 7
-  +~GlobalGT("GV#DAVETalk","GLOBAL",6)~+ ~Are you aware there's a temple of Talos next door to you?~ EXTERN %tutu_var%THALAN GV#THALAN
-
 
 //Hentold
-I_C_T2 ~%tutu_var%HENTOL~ 8 GV#DAVEInterjectHENTOL1
+I_C_T ~%tutu_var%HENTOL~ 8 GV#DAVEInterjectHENTOL1
 == GV#DAVEJ IF ~InParty("GV#DAVE") InMyArea("GV#DAVE") !StateCheck("GV#DAVE",CD_STATE_NOTVALID)~ THEN
 ~Ahh. Classic mistake. If you're going to rob the dead, do it before they're buried. Always gets complicated once the rot sets in.~
+== %tutu_var%HENTOL ~My thieving days are over, and I'll swear it to any god that would grant me peace!~
 END
 
-I_C_T2 ~%tutu_var%HENTOL~ 9 GV#DAVEInterjectHENTOL1
+I_C_T ~%tutu_var%HENTOL~ 9 GV#DAVEInterjectHENTOL1
 == GV#DAVEJ IF ~InParty("GV#DAVE") InMyArea("GV#DAVE") !StateCheck("GV#DAVE",CD_STATE_NOTVALID)~ THEN
 ~Ahh. Classic mistake. If you're going to rob the dead, do it before they're buried. Always gets complicated once the rot sets in.~
+== %tutu_var%HENTOL ~My thieving days are over, and I'll swear it to any god that would grant me peace!~
 END
 
-I_C_T2 ~%tutu_var%HENTOL~ 10 GV#DAVEInterjectHENTOL1
+I_C_T ~%tutu_var%HENTOL~ 10 GV#DAVEInterjectHENTOL1
 == GV#DAVEJ IF ~InParty("GV#DAVE") InMyArea("GV#DAVE") !StateCheck("GV#DAVE",CD_STATE_NOTVALID)~ THEN
 ~Ahh. Classic mistake. If you're going to rob the dead, do it before they're buried. Always gets complicated once the rot sets in.~
+== %tutu_var%HENTOL ~My thieving days are over, and I'll swear it to any god that would grant me peace!~
 END
 
 //Taugosz
@@ -75,10 +68,11 @@ I_C_T ~%tutu_var%TAMOKO~ 16 GV#DAVEInterjectTAMOKO1
 END
 
 //Telano
-I_C_T2 ~%tutu_var%TELANO~ 9 GV#DAVEInterjectTELANO1
+I_C_T ~%tutu_var%TELANO~ 9 GV#DAVEInterjectTELANO1
 == GV#DAVEJ IF ~InParty("GV#DAVE") InMyArea("GV#DAVE") !StateCheck("GV#DAVE",CD_STATE_NOTVALID)~ THEN
 ~Ah, the old "If you kill me, you're no better than me" routine. I tried that on a group of Helmies once.~
 = ~It, uh...didn't work. At all.~
+== %tutu_var%TELANO ~I'll have a hawk's eye on you, <CHARNAME>, from this moment forward. Be wary.~
 END
 
 //Therella
